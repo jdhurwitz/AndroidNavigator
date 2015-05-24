@@ -23,7 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.fileexplorer.FileexplorerActivity;
+import com.example.fileexplorer.FileChooser;
 
 
 /**
@@ -109,6 +109,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
+                        getString(R.string.title_section4),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -192,8 +193,12 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
+
+    /*
+    Determine which activity to start based on selected item.
+     */
     private void selectItem(int position) {
- /*       mCurrentSelectedPosition = position;
+       /* mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
         }
@@ -202,13 +207,17 @@ public class NavigationDrawerFragment extends Fragment {
         }
         if (mCallbacks != null) {
             mCallbacks.onNavigationDrawerItemSelected(position);
-        }
-*/
+        }*/
+        Intent selectedIntent = null;
         switch(position){
-            case 0:
-                Intent a = new Intent(getActivity(), FileexplorerActivity.class);
-                startActivity(a);
-
+            case 1:
+            {
+                selectedIntent = new Intent(this.getActivity(), FileChooser.class);
+                startActivity(selectedIntent);
+                break;
+            }
+            default:
+                break;
 
         }
     }

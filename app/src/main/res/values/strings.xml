@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Nav</string>
 
-    <string name="title_section1">Intent</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Recent Activity</string>
+    <string name="title_section2">File Sharing</string>
+    <string name="title_section3">Social</string>
+    <string name="title_section4">About Us</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

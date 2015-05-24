@@ -15,19 +15,22 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".FileexplorerActivity"
-            android:label="@string/title_activity_fileexplorer"
-            android:theme="@android:style/Theme.Holo" >
-            <intent-filter>
+            android:label="@string/title_activity_fileexplorer">
+            <!--android:theme="@android:style/Theme.Holo"--> >
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
+
         </activity>
         
         <activity
             android:name=".FileChooser"
-            android:label="Choose File" 
-             android:theme="@android:style/Theme.Holo"> 
+            android:label="Choose File" >
+<!--
+             android:theme="@android:style/Theme.Holo">
+-->
                 <action android:name="com.example.fileexplorer.FileChooser" />
 
                 <category android:name="android.intent.category.DEFAULT" /> 

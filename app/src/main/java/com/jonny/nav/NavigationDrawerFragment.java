@@ -210,10 +210,22 @@ public class NavigationDrawerFragment extends Fragment {
         }*/
         Intent selectedIntent = null;
         switch(position){
+            case 0: //might need to remove
+            {
+                break;
+            }
             case 1:
             {
                 selectedIntent = new Intent(this.getActivity(), FileChooser.class);
                 startActivity(selectedIntent);
+                break;
+            }
+            case 2:
+            {
+                break;
+            }
+            case 3:
+            {
                 break;
             }
             default:

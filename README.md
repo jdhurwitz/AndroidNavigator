@@ -3,7 +3,7 @@
 Navigator code for proximity pass. Allows for easy intent starting and testing of individual code sections.
 
 To use the navigator:
-\n
+<br>
 1) Download and unzip.
 2) Open android studio and import existing project.
 3) Select the Nav project.

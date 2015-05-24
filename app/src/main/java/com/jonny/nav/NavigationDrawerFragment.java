@@ -210,22 +210,10 @@ public class NavigationDrawerFragment extends Fragment {
         }*/
         Intent selectedIntent = null;
         switch(position){
-            case 0:
-                break;
             case 1:
             {
                 selectedIntent = new Intent(this.getActivity(), FileChooser.class);
                 startActivity(selectedIntent);
-                break;
-            }
-            case 2:
-            {
-                //start an activity here
-                break;
-            }
-            case 3:
-            {
-                //start an activity here
                 break;
             }
             default:
@@ -306,7 +294,7 @@ public class NavigationDrawerFragment extends Fragment {
     /**
      * Callbacks interface that all activities using this fragment must implement.
      */
-    public static interface NavigationDrawerCallbacks {
+    public interface NavigationDrawerCallbacks {
         /**
          * Called when an item in the navigation drawer is selected.
          */

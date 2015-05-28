@@ -1,16 +1,18 @@
 package com.example.fileexplorer;
 
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
+
 import java.io.File;
 import java.sql.Date;
-import java.util.ArrayList; 
+import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.text.DateFormat; 
-import android.os.Bundle; 
-import android.app.ListActivity;
-import android.content.Intent; 
-import android.view.View;
-import android.widget.ListView; 
 
 public class FileChooser extends ListActivity {
 
@@ -84,7 +86,15 @@ public class FileChooser extends ListActivity {
 	}
     private void onFileClick(Item o)
     {
-    	//Toast.makeText(this, "Folder Clicked: "+ currentDir, Toast.LENGTH_SHORT).show();
+		//toast for a long amount of time to show current dir
+		/*
+		Clicked file will have directory to be entered into string as specified:
+		currentDir + "/" + o.getName()
+
+		 */
+
+    	Toast.makeText(this, "Folder Clicked: "+ currentDir + "/" + o.getName(), Toast.LENGTH_LONG).show();
+
     	Intent intent = new Intent();
         intent.putExtra("GetPath",currentDir.toString());
         intent.putExtra("GetFileName",o.getName());

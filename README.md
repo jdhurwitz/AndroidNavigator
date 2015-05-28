@@ -1,8 +1,17 @@
 # Nav
 
-Navigator code for proximity pass. Allows for easy intent starting and testing of individual code sections.
+Navigator code for proximity pass. Allows for easy intent starting and testing of individual code sections. Integrated file explorer allowing for file selection. Ability to return full file path. 
 
-To use the navigator:
+<b>Current Rev Notes</b>
+<br>
+-Default activity not specified for startup, must put your activity in case > 0
+<br>
+-File explorer does not store file path of last selected variable yet
+<br>
+-File explorer returns to the home menu after selection (as expected)
+<br>
+
+<b>To use the navigator: </b>
 <br>
 1) Download and unzip.
 <br>

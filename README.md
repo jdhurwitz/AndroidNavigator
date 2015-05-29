@@ -19,6 +19,8 @@ Navigator framework code for proximity pass. Allows for easy intent starting and
 <br>
 -Browse file system and select file. Once item has been selected, start Nate's code.
 <br>
+-Go through steps to transfer file. Upon success, notify user and return to main menu
+<br>
 
 
 <b>To use the navigator: </b>

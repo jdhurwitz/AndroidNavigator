@@ -67,7 +67,7 @@ public class FileChooser extends ListActivity {
 		 Collections.sort(fls);
 		 dir.addAll(fls);
 		 if(!f.getName().equalsIgnoreCase("sdcard"))
-			 dir.add(0,new Item("Return to Previous Directory","You are in: "+f.getName(),"",f.getParent(),"directory_up"));
+			 dir.add(0,new Item("Return to Previous Directory","Currently in:  "+f.getName(),"",f.getParent(),"directory_up"));
 		 adapter = new FileArrayAdapter(FileChooser.this,R.layout.file_view,dir);
 		 this.setListAdapter(adapter); 
     }

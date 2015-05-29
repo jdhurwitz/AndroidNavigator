@@ -26,8 +26,9 @@ public class FileChooser extends ListActivity {
     }
     private void fill(File f)
     {
-    	File[]dirs = f.listFiles(); 
-		 this.setTitle("Current Dir: "+f.getName());
+    	File[]dirs = f.listFiles();
+		//Current directory set
+		 //this.setTitle("Current Directory: "+f.getName());
 		 List<Item>dir = new ArrayList<Item>();
 		 List<Item>fls = new ArrayList<Item>();
 		 try{
@@ -66,7 +67,7 @@ public class FileChooser extends ListActivity {
 		 Collections.sort(fls);
 		 dir.addAll(fls);
 		 if(!f.getName().equalsIgnoreCase("sdcard"))
-			 dir.add(0,new Item("..","Parent Directory","",f.getParent(),"directory_up"));
+			 dir.add(0,new Item("Return to Previous Directory","You are in: "+f.getName(),"",f.getParent(),"directory_up"));
 		 adapter = new FileArrayAdapter(FileChooser.this,R.layout.file_view,dir);
 		 this.setListAdapter(adapter); 
     }
@@ -93,12 +94,23 @@ public class FileChooser extends ListActivity {
 
 		 */
 
-    	Toast.makeText(this, "Folder Clicked: "+ currentDir + "/" + o.getName(), Toast.LENGTH_LONG).show();
+    	//Toast.makeText(this, "Folder Clicked: "+ currentDir + "/" + o.getName(), Toast.LENGTH_LONG).show();
+		String path = currentDir + "/" + o.getName();
+		Toast.makeText(this, path, Toast.LENGTH_LONG).show();
 
     	Intent intent = new Intent();
         intent.putExtra("GetPath",currentDir.toString());
         intent.putExtra("GetFileName",o.getName());
         setResult(RESULT_OK, intent);
         finish();
+
+		//Start Nate's Code
+		/*
+		Intent p2p = new Intent(this.getActivity, <name>.class);
+		p2p.putExtra("GetPath", path);
+		setResult(RESULT_OK, p2p);
+		finish();
+
+		 */
     }
 }

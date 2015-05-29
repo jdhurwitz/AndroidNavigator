@@ -80,7 +80,9 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
+        //DEFAULT DEFAULT DEFAULT
+        //DEFAULT!!!!!
+        //selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -210,14 +212,16 @@ public class NavigationDrawerFragment extends Fragment {
         }*/
         Intent selectedIntent = null;
         switch(position){
-            case 0: //might need to remove
+            case 0: //file explorer activity will need to move to Robert's code
             {
+                //Start robert's code here
+                selectedIntent = new Intent(this.getActivity(), FileChooser.class);
+                startActivity(selectedIntent);
                 break;
             }
             case 1:
             {
-                selectedIntent = new Intent(this.getActivity(), FileChooser.class);
-                startActivity(selectedIntent);
+
                 break;
             }
             case 2:

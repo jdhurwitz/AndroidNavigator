@@ -1,15 +1,25 @@
 # Nav
 
-Navigator code for proximity pass. Allows for easy intent starting and testing of individual code sections. Integrated file explorer allowing for file selection. Ability to return full file path. 
+Navigator framework code for proximity pass. Allows for easy intent starting and testing of individual code sections. Integrated file explorer allowing for file selection. Ability to return full file path. 
 
 <b>Current Rev Notes</b>
 <br>
--Default activity not specified for startup, must put your activity in case > 0
+-Default activity not specified for startup. 
 <br>
 -File explorer does not store file path of last selected variable yet
 <br>
 -File explorer returns to the home menu after selection (as expected)
 <br>
+
+<b>Design Hierarchy Notes</b>
+<br>
+-Default activity startup will be list of nearby android devices on wifi direct. (Rob)
+<br>
+-Once devices have been paired onSuccess, start file explorer activity
+<br>
+-Browse file system and select file. Once item has been selected, start Nate's code.
+<br>
+
 
 <b>To use the navigator: </b>
 <br>

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Nav</string>
 
-    <string name="title_section1">File Sharing</string>
-    <string name="title_section2">Social</string>
+    <string name="title_section1">File Explorer</string>
+    <string name="title_section2">Robert\'s Code</string>
     <string name="title_section3">About App</string>
     <string name="title_section4">Settings</string>
 

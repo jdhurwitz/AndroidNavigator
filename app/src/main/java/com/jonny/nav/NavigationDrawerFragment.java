@@ -68,7 +68,7 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mDrawerLayout = null;
         // Read in the flag indicating whether or not the user has demonstrated awareness of the
         // drawer. See PREF_USER_LEARNED_DRAWER for details.
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -214,14 +214,16 @@ public class NavigationDrawerFragment extends Fragment {
         switch(position){
             case 0: //file explorer activity will need to move to Robert's code
             {
-                //Start robert's code here
-                selectedIntent = new Intent(this.getActivity(), FileChooser.class);
-                startActivity(selectedIntent);
+                //Start File explorer code here
+                selectedIntent = new Intent(getActivity(), FileChooser.class);
+                getActivity().startActivity(selectedIntent);
                 break;
             }
             case 1:
             {
-
+                //start p2p_main
+               // selectedIntent = new Intent(getActivity(), p2p_main.class);
+                //startActivity(selectedIntent);
                 break;
             }
             case 2:
@@ -236,6 +238,8 @@ public class NavigationDrawerFragment extends Fragment {
                 break;
 
         }
+        mDrawerListView.setItemChecked(position,true);
+        mDrawerLayout.closeDrawer(mDrawerListView);
     }
 
     @Override
